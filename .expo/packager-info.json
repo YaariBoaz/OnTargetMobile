@@ -2,8 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 90678,
-  "expoServerNgrokUrl": "https://ng-stk.boazyaarii.ontarget.exp.direct",
-  "packagerNgrokUrl": "https://packager.ng-stk.boazyaarii.ontarget.exp.direct",
-  "ngrokPid": 90691
+  "packagerPid": 99841,
+  "expoServerNgrokUrl": "https://ng-stk.boazyaarii.ontargetmobile.exp.direct",
+  "packagerNgrokUrl": "https://packager.ng-stk.boazyaarii.ontargetmobile.exp.direct",
+  "ngrokPid": 99853
 }

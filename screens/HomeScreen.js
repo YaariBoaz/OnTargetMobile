@@ -88,72 +88,106 @@ class HomeScreen extends Component {
                         }}
                                source={require('../assets/images/tabsBG.png')}>
                         </Image>
-                        <View style={{height: '10%'}}>
-                            <View>
-                                <Text style={{color: '#886F1A', fontSize: 35}}> HIT RATIO</Text>
-                            </View>
-                            <View style={{flexDirection: 'row'}}>
-                                <Text style={{color: '#886F1A', fontSize: 35}}>96/</Text>
-                                <Text style={{color: '#555555', fontSize: 35}}>200</Text>
-                            </View>
-                        </View>
-                        <Swiper style={{height: '80%'}} showsButtons={false}>
-                            <View style={styles.slide}>
-                                <View style={{justifyContent: 'center', flex: 1, alignItems: 'center'}}>
-                                    <View style={{
-                                        backgroundColor: '#F4F4F4',
-                                        height: '55%',
-                                        width: '80%',
-                                        borderRadius: 300
-                                    }}>
-                                        <PieChart
-                                            style={{height: '100%'}}
-                                            outerRadius={'80%'}
-                                            innerRadius={'45%'}
-                                            data={data}
-                                        />
-                                        <Text
-                                            onLayout={({nativeEvent: {layout: {width}}}) => {
-                                                this.setState({labelWidth: width});
-                                            }}
-                                            style={{
-                                                position: 'absolute',
-                                                left: deviceWidth * 0.8 / 2 - labelWidth / 2,
-                                                top: '45%',
-                                                textAlign: 'center',
-                                                fontSize: 30,
-                                                color: '#D98F2D'
-                                            }}>
-                                            75%
-                                        </Text>
+
+                        <View style={{height: '55%'}}>
+                            <Swiper style={styles.wrapper}
+                                    dot={<View style={{
+                                        backgroundColor: '#6D6969',
+                                        width: 13,
+                                        height: 13,
+                                        borderRadius: 7,
+                                        marginLeft: 7,
+                                        marginRight: 7
+                                    }}/>}
+                                    activeDot={<View style={{
+                                        backgroundColor: '#D9902C',
+                                        width: 13,
+                                        height: 13,
+                                        borderRadius: 7,
+                                        marginLeft: 7,
+                                        marginRight: 7
+                                    }}/>}
+                                    paginationStyle={{
+                                        bottom: '2%'
+                                    }}
+                                    loop={false}
+                                    style={{height: '100%%'}} showsButtons={false}>
+                                <View style={styles.slide}>
+                                    <View style={{height: '20%', paddingTop: 20, paddingLeft: 20}}>
+                                        <View>
+                                            <Text style={{color: '#886F1A', fontSize: 30}}> HIT RATIO</Text>
+                                        </View>
+                                        <View style={{flexDirection: 'row'}}>
+                                            <Text style={{color: '#886F1A', fontSize: 30}}>96/</Text>
+                                            <Text style={{color: '#555555', fontSize: 30}}>200</Text>
+                                        </View>
+                                    </View>
+                                    <View style={{height: '80%', justifyContent: 'center', alignItems: 'center'}}>
+                                        <View style={{
+                                            backgroundColor: '#F4F4F4',
+                                            height: '80%',
+                                            width: '65%',
+                                            padding: 10,
+                                            borderRadius: 300
+                                        }}>
+                                            <PieChart
+                                                style={{height: '100%'}}
+                                                outerRadius={'100%'}
+                                                innerRadius={'60%'}
+                                                data={data}
+                                            />
+                                            <Text
+                                                onLayout={({nativeEvent: {layout: {width}}}) => {
+                                                    this.setState({labelWidth: width});
+                                                }}
+                                                style={{
+                                                    position: 'absolute',
+                                                    left: deviceWidth * 0.65 / 2 - labelWidth / 2,
+                                                    top: '45%',
+                                                    textAlign: 'center',
+                                                    fontSize: 30,
+                                                    color: '#D98F2D'
+                                                }}>
+                                                75%
+                                            </Text>
+                                        </View>
                                     </View>
                                 </View>
-                            </View>
-                            <View style={styles.slide2}>
-                                <Text style={styles.text}>Beautiful</Text>
-                            </View>
-                            <View style={styles.slide3}>
-                                <Text style={styles.text}>And simple</Text>
-                            </View>
-                        </Swiper>
-
-                        <View style={{backgroundColor: 'transparent'}}>
-                            <View style={styles.textContainer}>
-                                <Text style={styles.nameText}>Fastest Avg Split</Text>
-                                <Text style={styles.valueText}>2 Sec</Text>
-                            </View>
-                            <View style={styles.textContainer}>
-                                <Text style={styles.nameText}>Best Avg distance</Text>
-                                <Text style={styles.valueText}>3 CM</Text>
-                            </View>
-                            <View style={styles.textContainer}>
-                                <Text style={styles.nameText}>Last Shooting</Text>
-                                <Text style={styles.valueText}>08.07.18</Text>
-                            </View>
+                                <View style={styles.slide2}>
+                                    <Text style={styles.text}>Beautiful</Text>
+                                </View>
+                                <View style={styles.slide3}>
+                                    <Text style={styles.text}>And simple</Text>
+                                </View>
+                            </Swiper>
                         </View>
-                        <View style={styles.textContainer}>
-                            <Text style={styles.nameText}>Longest Shoot</Text>
-                            <Text style={styles.valueText}>1250yds</Text>
+                        <View style={{
+                            height: '45%',
+                            borderTopWidth: 1,
+                            width: '60%',
+                            alignSelf: 'center',
+                            marginTop: 10,
+                        }}>
+                            <View style={{}}>
+                                <View style={styles.textContainerFirst}>
+                                    <Text style={styles.nameText}>Longest Shoot</Text>
+                                    <Text style={styles.valueText}>1250yds</Text>
+                                </View>
+
+                                <View style={styles.textContainer}>
+                                    <Text style={styles.nameText}>Fastest Avg Split</Text>
+                                    <Text style={styles.valueText}>2 Sec</Text>
+                                </View>
+                                <View style={styles.textContainer}>
+                                    <Text style={styles.nameText}>Best Avg distance</Text>
+                                    <Text style={styles.valueText}>3 CM</Text>
+                                </View>
+                                <View style={styles.textContainer}>
+                                    <Text style={styles.nameText}>Last Shooting</Text>
+                                    <Text style={styles.valueText}>08.07.18</Text>
+                                </View>
+                            </View>
+
                         </View>
                     </View>
                 </View>
@@ -218,23 +252,25 @@ const styles = StyleSheet.create({
     textContainer: {
         width: '100%',
         textAlign: 'left',
-        alignItems: 'flex-start',
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        borderBottomWidth: 1,
-        borderBottomColor: '#1d1c1c78'
+        alignItems: 'center',
+    },
+    textContainerFirst:{
+        width: '100%',
+        textAlign: 'left',
+        alignItems: 'center',
+        marginTop:10
     },
     nameText: {
         color: '#707070',
-        fontSize: 20
+        fontSize: 15
     },
     valueText: {
-        color: "#70524b",
+        color: "#93711C",
         fontSize: 20
     },
     slide: {
         width: '100%',
-        height: '80%',
+        height: '100%',
     }
 });
 
