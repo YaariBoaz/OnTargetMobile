@@ -1,9 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 99841,
-  "expoServerNgrokUrl": "https://ng-stk.boazyaarii.ontargetmobile.exp.direct",
-  "packagerNgrokUrl": "https://packager.ng-stk.boazyaarii.ontargetmobile.exp.direct",
-  "ngrokPid": 99853
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }

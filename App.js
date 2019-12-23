@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Image, View, TouchableHighlight, Platform} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from './screens/Dashboard/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import Shooting from './screens/Shooting/Shoot'
 import Setup from './screens/Shooting/Setup'
